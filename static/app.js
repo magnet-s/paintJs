@@ -19,6 +19,11 @@ ctx.fillStyle = "";
 let paint = false;
 let filling = false;
 
+function handelClearClick(){
+    ctx.fillRect(0,0, canvas.width, canvas.height)
+    ctx.fillStyle = "#faebd7"
+}
+
 function handleModeClick(){
     if (filling === true){
         filling = false;
@@ -111,4 +116,8 @@ if(mode){
 
 if(saveBtn){
     saveBtn.addEventListener("click", handleSaveClick)
+}
+
+if(clearBtn){
+    clearBtn.addEventListener("click", handelClearClick)
 }
